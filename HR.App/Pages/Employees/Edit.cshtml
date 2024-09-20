@@ -1,0 +1,35 @@
+﻿@page "{EmployeeId:int?}" 
+@model Pages.Employees.EditModel
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+<h2>Editing @Model.Employee.Name</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Employee.Id" />
+    <div class="form-group">
+        <label asp-for="Employee.Name"></label>
+        <input asp-for="Employee.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="Employee.Name">
+
+        </span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Employee.Location"></label>
+        <input asp-for="Employee.Location" class="form-control" />
+        <span class="text-danger" asp-validation-for="Employee.Location">
+        
+        </span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Employee.EmployeeType"></label>
+        <select class="form-control" asp-for="Employee.EmployeeType" asp-items="Model.EmployeeTypes">
+        
+        </select>
+        <span class="text-danger" asp-validation-for="Employee.EmployeeType">
+        
+        </span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+
+</form>
