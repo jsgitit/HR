@@ -30,10 +30,10 @@ public class Startup
 
 
         // InMemory Database implementation for DEV
-        services.AddSingleton<IEmployeeData, InMemoryEmployeeData>();
+        // services.AddSingleton<IEmployeeData, InMemoryEmployeeData>();
 
         // A Scoped SQL Server Database Implementation, per http request, for Production
-        //services.AddScoped<IEmployeeData, SqlEmployeeData>();
+        services.AddScoped<IEmployeeData, SqlEmployeeData>();
 
         services.AddRazorPages();
     }
