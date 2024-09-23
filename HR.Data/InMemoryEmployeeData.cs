@@ -15,8 +15,8 @@ public class InMemoryEmployeeData : IEmployeeData
         employees = new List<Employee>
         {
             new Employee { Id = 1, Name = "Sarah", Location = "USA", EmployeeType = EmployeeType.FullTimeEmployee },
-            new Employee { Id = 2, Name = "Sarah", Location = "Italy", EmployeeType = EmployeeType.Contractor },
-            new Employee { Id = 3, Name = "Sarah", Location = "Germany", EmployeeType = EmployeeType.Vendor }
+            new Employee { Id = 2, Name = "Giovanni", Location = "Italy", EmployeeType = EmployeeType.Contractor },
+            new Employee { Id = 3, Name = "Adele", Location = "Germany", EmployeeType = EmployeeType.Vendor }
         };
     }
     public Employee Add(Employee newEmployee)

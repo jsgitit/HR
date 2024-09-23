@@ -1,0 +1,56 @@
+﻿@page
+@model Pages.Employees.ListModel
+@{
+    ViewData["Title"] = "Employees";
+}
+<head>
+    <script src="https://kit.fontawesome.com/7f5e11353c.js" crossorigin="anonymous"></script>
+</head>
+
+<div class="container mt-5">
+    <!-- Header Section -->
+    <div class="row">
+        <div class="col-md-8 text-start">
+            <h1 class="display-4 text-info">Employees</h1>
+            <p class="lead text-muted">Search and manage Employee information</p>
+        </div>
+    </div>
+
+    <!-- Search Form Section -->
+    <div class="row">
+        <div class="col-md-8 text-start">
+            <form method="get" class="d-flex">
+                <input type="search" class="form-control me-2" asp-for="SearchTerm" placeholder="Search Employees" />
+
+                <!-- Search Button -->
+                <button class="btn btn-outline-info btn-lg me-2" type="submit">
+                    <i class="fas fa-search fa-1x"></i>
+                </button>
+
+                <!-- Add New Employee Button -->
+                <a asp-page="./Edit" class="btn btn-outline-info btn-lg">
+                    <i class="fas fa-plus-circle fa-1x"></i>
+                </a>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Employee List Section -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            @foreach (var Employee in Model.Employees)
+            {
+                <partial name="_Summary" model="Employee" />
+            }
+        </div>
+    </div>
+</div>
+
+@section footer {
+    <footer class="footer bg-info">
+        <div class="container">
+            <span class="text-muted">@Model.Message</span>
+        </div>
+    </footer>
+}

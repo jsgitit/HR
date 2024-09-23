@@ -1,0 +1,23 @@
+﻿@page "{EmployeeId:int}"
+
+@model Pages.Employees.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+@if (Model.Message != null)
+{
+    <div class="alert alert-info">
+        @Model.Message
+    </div>
+}
+<h2>@Model.Employee.Name</h2>
+<div>
+    Id: @Model.Employee.Id
+</div>
+<div>
+    Location: @Model.Employee.Location
+</div>
+<div>
+    EmployeeType: @Model.Employee.EmployeeType
+</div>
+<a asp-page="./List" class="btn btn-outline-primary">All Employees</a>

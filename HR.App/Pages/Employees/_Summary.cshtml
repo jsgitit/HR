@@ -1,0 +1,29 @@
+﻿@using HR.Core
+@model Employee
+
+<div class="card p-xl-2">
+    <div class="card-header bg-info">
+        <h3>@Model.Name</h3>
+    </div>
+    <div class="card-body">
+        <div>Location: @Model.Location</div>
+        <div>EmployeeType: @Model.EmployeeType</div>
+    </div>
+    <div class="card-footer">
+        <a class="btn"
+           asp-page="./Detail"
+           asp-route-EmployeeId="@Model.Id">
+            <i class="fas fa-info-circle"></i>
+        </a>
+        <a class="btn"
+           asp-page="./Edit"
+           asp-route-EmployeeId="@Model.Id">
+            <i class="fas fa-edit"></i>
+        </a>
+        <a class="btn"
+           asp-page="./Delete"
+           asp-route-EmployeeId="@Model.Id">
+            <i class="fas fa-trash-alt"></i>
+        </a>
+    </div>
+</div>
