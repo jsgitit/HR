@@ -17,7 +17,7 @@ public class Startup
     {
         services.AddDbContextPool<HRDbContext>(options =>
         {
-            options.UseSqlServer(Configuration.GetConnectionString("HRDbConnection"),
+            options.UseSqlServer(Configuration.GetConnectionString("HRDBContainer"),
                 sqlServerOptionsAction: sqlOptions =>
                 {
                     // Enable retry on failure for transient errors
