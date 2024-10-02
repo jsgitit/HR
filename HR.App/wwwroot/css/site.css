@@ -2,73 +2,151 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .card {
     margin-bottom: 10px;
 }
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+/* Sticky footer styles -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+/* Sticky footer styles -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    margin-bottom: 60px; /* Margin bottom by footer height */
+    background-color: white; /* Light Mode (default) */
+    color: black;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text */
 }
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #343a40; /* Bootstrap's dark color */
+    color: #f8f9fa; /* Light text color */
+}
+
+    body.dark-mode .navbar {
+        background-color: #495057; /* Bootstrap's dark variant */
+        border-bottom: 1px solid #6c757d;
+    }
+
+    body.dark-mode .nav-link {
+        color: #f8f9fa; /* Light text color */
+    }
+
+    body.dark-mode .btn-outline-secondary {
+        color: #f8f9fa; /* Light text color */
+        border-color: #f8f9fa; /* Light border color */
+    }
+
+        body.dark-mode .btn-outline-secondary:hover {
+            background-color: #6c757d; /* Darker on hover */
+        }
+
+    /* Dark Mode Styles for Bootstrap Cards */
+    body.dark-mode .card {
+        background-color: #343a40; /* Dark card background */
+        color: #f8f9fa; /* Light text color */
+        border: 1px solid #495057; /* Darker border color */
+    }
+
+    body.dark-mode .card-header {
+        background-color: #495057; /* Darker background for card header */
+    }
+
+    body.dark-mode .card-body {
+        background-color: #343a40; /* Dark background for card body */
+    }
+
+    body.dark-mode .form-label {
+        color: #f8f9fa; /* Light text color for form labels */
+    }
+
+    /* Form control styles in dark mode */
+    body.dark-mode .form-control {
+        background-color: #495057; /* Darker background for form controls */
+        color: #f8f9fa; /* Light text color for form controls */
+        border: 1px solid #6c757d; /* Border color for form controls */
+    }
+
+    /* Adjusting button colors for dark mode */
+    body.dark-mode .btn-outline-info {
+        color: #17a2b8; /* Keep the Bootstrap info color for text */
+        border-color: #17a2b8; /* Keep the Bootstrap info color for border */
+        background-color: transparent; /* Ensure background is transparent */
+    }
+
+        body.dark-mode .btn-outline-info:hover {
+            background-color: rgba(23, 162, 184, 0.1); /* Lighten the background slightly on hover */
+        }
+
+        /* Additional Button Styles */
+        body.dark-mode .btn-outline-info:focus,
+        body.dark-mode .btn-outline-info:active {
+            box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5); /* Add focus/active outline */
+        }
+
+    body.dark-mode .btn-primary {
+        background-color: #1b6ec2; /* Maintain existing primary color */
+    }
+
+        body.dark-mode .btn-primary:hover {
+            background-color: #1a5a9f; /* Darker on hover for primary button */
+        }
